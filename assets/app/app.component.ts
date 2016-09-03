@@ -18,7 +18,6 @@ import { HomeComponent } from "./home/home.component";
     template: ` 
         <div class="container">
             <my-header></my-header>
-
             <router-outlet></router-outlet>
         </div>
     `
