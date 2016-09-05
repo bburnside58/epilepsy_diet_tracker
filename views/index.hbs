@@ -2,6 +2,11 @@
 <html>
 <head>
     <base href="/">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Epilepsy Diet Tracker</title>
     <link rel="shortcut icon" href="_/public/favicon.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -12,9 +17,12 @@
     <script src="js/vendor/zone.js/dist/zone.js"></script>
     <script src="js/vendor/reflect-metadata/Reflect.js"></script>
     <script src="js/vendor/systemjs/dist/system.src.js"></script>
+    <!-- Zingchart CDN -->
     <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
     <!-- 2. Configure SystemJS -->
     <script src="systemjs.config.js"></script>
+
+
 </head>
 <body>
 <my-app>Loading...</my-app>
@@ -22,5 +30,7 @@
 <script>
     System.import('app').catch(function(err){ console.error(err);  });
 </script>
+
+
 </body>
 </html>

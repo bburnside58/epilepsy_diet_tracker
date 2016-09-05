@@ -5,7 +5,7 @@ import { Routes, ROUTER_DIRECTIVES } from "@angular/router"; // NEED
 import { HeaderComponent } from "./header.component"; // NEED
 // import { ChartsComponent } from "./charts/charts.component";
 // import { ZingCharts } from "./charts/zingcharts.component";
-import { Chart } from "./chart.model";
+import { Chart } from "./zing/chart.model";
 import { HomeComponent } from "./home/home.component";
 
 

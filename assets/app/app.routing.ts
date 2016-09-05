@@ -1,7 +1,7 @@
 import { Routes, RouterModule } from "@angular/router";
 
 // import { AUTH_ROUTES } from "./auth/auth.routes"; // Will NEED 
-import { ChartsComponent } from "./charts/charts.component";
+import { ChartsComponent } from "./zing/charts.component";
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "./home/home.component";
 

@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { Chart } from "../chart.model";
+import { Chart } from "./chart.model";
 // import { ZingCharts } from "./zingcharts.component";
 
 @Component({
