@@ -4,12 +4,54 @@ import { Chart } from "./chart.model";
 
 @Component({
     selector: 'my-charts',
-    template:'<zingchart *ngFor="let chart of charts" [chart]="chart"></zingchart>'
+    template:`
+    <div>
+      
+        <div class="container">
+
+         <!-- Page Heading -->
+          <div class="row">
+              <div class="col-lg-12">
+                  <h1 class="page-header2">Epilepsy Diet Tracker
+                      <small>-MCT Oil Diet Plan-</small>
+                  </h1>
+              </div>
+          </div>
+          <!-- /.row -->
+        </div>
+
+        <div class="row mainChart">
+          <zingchart *ngFor="let chart of charts" [chart]="chart"></zingchart>
+        </div>
+<div class="row text-center">
+  <form>
+    Quantity (between 1 and 5):
+    <input type="number" name="quantity" min="1" max="5">
+  </form>
+</div>
+        <div class="push"></div>
+        <hr>
+
+        <hr>
+        
+          <!-- Footer -->
+        <footer>
+          <div class="row">
+              <div class="col-lg-12">
+                  <p>Copyright &copy; Brian C. Burnside</p>
+              </div>
+          </div>
+          <!-- /.row -->
+        </footer>
+      
+    </div>
+    `
 })
 export class ChartsComponent {
     charts: Chart[];
 
     constructor () {
+      let yo = 25;
         this.charts = [
             {
                 id: 'chart-1',
@@ -24,7 +66,7 @@ export class ChartsComponent {
                       "subtitle":{
                         "text":"Enter Your Daily Amounts",
                         "font-weight":"normal",
-                        "font-family":"serif",
+                        "font-family":"sans-serif",
                         "font-size": 18,
                         "font-color": "#1a1a1a"
                       },
@@ -34,10 +76,10 @@ export class ChartsComponent {
                       }
                     }, 
                     "scale":{
-                        "size-factor": 0.6 // not sure the diff. between size-factor and setting w/h
+                        "size-factor": 0.5 // not sure the diff. between size-factor and setting w/h
                       },
                     "height": "100%",
-                    "width": "50%",
+                    "width": "100%",
                     "background-color": "transparent",
                     "plot":{
                       "border-width":1,
@@ -56,12 +98,12 @@ export class ChartsComponent {
                       }, // end of "value-box" 
                       "tooltip": {
                         "text": "%t",
-                        "visible":false
+                        "visible":true
                       }
                     }, // end of "plot"
                     "series":[
                       {
-                        "values":[25],
+                        "values":[yo],
                         "background-color":"#488003", // green
                         "text":"Fat"
                       },
@@ -82,7 +124,8 @@ export class ChartsComponent {
                       }
                     ]
                 } // end of data div
-            }
-        ]
+            }, // end of chart
+
+        ] // end of charts array
     }
 }

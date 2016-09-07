@@ -7,7 +7,7 @@ import { ROUTER_DIRECTIVES } from "@angular/router";
             <nav class="col-md-8 col-md-offset-2">
                 <ul class="nav nav-pills">
                     <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['']">Home</a></li>
-                    <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['chart']">Log</a></li>
+                    <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['chart']">Macros</a></li>
                     <li routerLinkActive="active"><a [routerLink]="['auth']">Authentication</a></li>
                 </ul>
             </nav>
@@ -26,6 +26,7 @@ import { ROUTER_DIRECTIVES } from "@angular/router";
         li {
             float: none;
             display: inline-block;
+            padding-left: 50px;
         }
         
         .router-link-active {

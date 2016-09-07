@@ -1,12 +1,15 @@
 
 import { Component, NgZone, AfterViewInit, OnDestroy } from "@angular/core";
 import { Chart } from "./chart.model";
+import { ChartsComponent } from "./charts.component";
 
 
 @Component({
 	selector: 'zingchart',
 	inputs: ['chart'],
-	template: `<div id="{{chart.id}}"></div>`
+	template: `<div id="{{chart.id}}"></div>
+
+	`
 })
 export class ZingCharts implements AfterViewInit, OnDestroy {
 	chart: Chart
