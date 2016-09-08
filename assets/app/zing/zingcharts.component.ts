@@ -15,7 +15,7 @@ export class ZingCharts implements AfterViewInit, OnDestroy {
 	chart: Chart
 
 	constructor (private zone: NgZone) { }
-
+	
 	ngAfterViewInit () {
 		this.zone.runOutsideAngular(() => zingchart.render(this.chart));
 	}

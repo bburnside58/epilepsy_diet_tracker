@@ -4,8 +4,8 @@ export class Chart {
 	data: Object;
 	
 
-	constructor (config: Object) {
-		this.id = config.id;
-		this.data = config.data;
+	constructor (id?: string, data?: Object) {
+		this.id = id;
+		this.data = data;
 	}
 }

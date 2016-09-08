@@ -1,11 +1,11 @@
 "use strict";
 var Chart = (function () {
-    function Chart(config) {
-        this.id = config.id;
-        this.data = config.data;
+    function Chart(id, data) {
+        this.id = id;
+        this.data = data;
     }
     return Chart;
 }());
 exports.Chart = Chart;
 
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInppbmcvY2hhcnQubW9kZWwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBO0lBS0MsZUFBYSxNQUFjO1FBQzFCLElBQUksQ0FBQyxFQUFFLEdBQUcsTUFBTSxDQUFDLEVBQUUsQ0FBQztRQUNwQixJQUFJLENBQUMsSUFBSSxHQUFHLE1BQU0sQ0FBQyxJQUFJLENBQUM7SUFDekIsQ0FBQztJQUNGLFlBQUM7QUFBRCxDQVRBLEFBU0MsSUFBQTtBQVRZLGFBQUssUUFTakIsQ0FBQSIsImZpbGUiOiJ6aW5nL2NoYXJ0Lm1vZGVsLmpzIiwic291cmNlc0NvbnRlbnQiOlsiXG5leHBvcnQgY2xhc3MgQ2hhcnQge1xuXHRpZDogU3RyaW5nO1xuXHRkYXRhOiBPYmplY3Q7XG5cdFxuXG5cdGNvbnN0cnVjdG9yIChjb25maWc6IE9iamVjdCkge1xuXHRcdHRoaXMuaWQgPSBjb25maWcuaWQ7XG5cdFx0dGhpcy5kYXRhID0gY29uZmlnLmRhdGE7XG5cdH1cbn0iXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInppbmcvY2hhcnQubW9kZWwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBO0lBS0MsZUFBYSxFQUFXLEVBQUUsSUFBYTtRQUN0QyxJQUFJLENBQUMsRUFBRSxHQUFHLEVBQUUsQ0FBQztRQUNiLElBQUksQ0FBQyxJQUFJLEdBQUcsSUFBSSxDQUFDO0lBQ2xCLENBQUM7SUFDRixZQUFDO0FBQUQsQ0FUQSxBQVNDLElBQUE7QUFUWSxhQUFLLFFBU2pCLENBQUEiLCJmaWxlIjoiemluZy9jaGFydC5tb2RlbC5qcyIsInNvdXJjZXNDb250ZW50IjpbIlxuZXhwb3J0IGNsYXNzIENoYXJ0IHtcblx0aWQ6IFN0cmluZztcblx0ZGF0YTogT2JqZWN0O1xuXHRcblxuXHRjb25zdHJ1Y3RvciAoaWQ/OiBzdHJpbmcsIGRhdGE/OiBPYmplY3QpIHtcblx0XHR0aGlzLmlkID0gaWQ7XG5cdFx0dGhpcy5kYXRhID0gZGF0YTtcblx0fVxufSJdLCJzb3VyY2VSb290IjoiL3NvdXJjZS8ifQ==
