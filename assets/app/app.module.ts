@@ -1,5 +1,7 @@
 import { NgModule } from "@angular/core"; // NEED
 import { BrowserModule } from "@angular/platform-browser"; // NEED
+import { FormBuilder, Validators } from '@angular/common';
+
 
 import { AppComponent } from "./app.component"; // NEED
 // import { AuthenticationComponent } from "./auth/authentication.component";
@@ -12,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms"; // NEED
 import { ChartsComponent } from "./zing/charts.component";// APP worked without this ?
 import { ZingCharts } from "./zing/zingcharts.component";
 import { HomeComponent } from "./home/home.component";
+import { LoginPage } from "./zing/chartform.component";
 // That thing with the empty service for AUTH....
 @NgModule({
     declarations: [
@@ -19,6 +22,7 @@ import { HomeComponent } from "./home/home.component";
         ChartsComponent, // app worked without this
         ZingCharts,
         HomeComponent,
+        LoginPage,
         // AuthenticationComponent,
         // LogoutComponent,
         // SignupComponent,

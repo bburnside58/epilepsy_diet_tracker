@@ -127,6 +127,7 @@ import { Component } from "@angular/core";
             <div class="row">
                 <div class="col-lg-12">
                     <p>Copyright &copy; Brian C. Burnside</p>
+                    <p></p>
                 </div>
             </div>
             <!-- /.row -->
