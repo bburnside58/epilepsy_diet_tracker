@@ -10,7 +10,8 @@ var mongoose = require('mongoose');
 var appRoutes = require('./routes/app');
 
 var app = express();
-mongoose.connect('localhost:27017/node-angular');
+// hard coded. can use port env for more security
+mongoose.connect('bcburnside58:funstuff1234@ds033056.mlab.com:33056/epilepsy_deployment');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
