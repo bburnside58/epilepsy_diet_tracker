@@ -4,7 +4,7 @@ import { ROUTER_DIRECTIVES } from "@angular/router";
     selector: 'my-header',
     template: `
         <header class="row">
-            <nav class="col-md-8 col-md-offset-2">
+            <nav class="col-md-12">
                 <ul class="nav nav-pills">
                     <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['']">Home</a></li>
                     <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['chart']">Macros</a></li>
@@ -16,7 +16,8 @@ import { ROUTER_DIRECTIVES } from "@angular/router";
     directives: [ROUTER_DIRECTIVES],
     styles: [`
         header {
-            margin-bottom: 20px;
+            margin-bottom: 0px;
+            background-color: ;
         }
     
         ul {

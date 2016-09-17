@@ -10,20 +10,19 @@ import { Component } from "@angular/core";
     
 <div>
 
+            <div class="col-md-12 foodImg img-responsive">
+            
+                <h1 class="text-center page-header2">Epilepsy Diet Tracker
+                    <br><p class="subHeader">dietary therapy for epilepsy</p>
+                </h1>
+              
+                
+            </div>
+
     <!-- Page Content -->
     <div class="container">
 
-        <!-- Page Heading -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header2">Epilepsy Diet Tracker
-                    <small>dietary therapy for epilepsy</small>
-                </h1>
-            </div>
-        </div>
-        <!-- /.row -->
-        <br>
-        <br>
+        
         <!-- Project One -->
         <div class="row">
             <div class="col-md-7">
@@ -143,7 +142,7 @@ import { Component } from "@angular/core";
 `
 })
 export class HomeComponent {
-
+    attentionBackground = "/img/dietCropped.jpg";
     legend = "img/legendNoMct.png";
     legendMCT = "img/legend.png";
     image1 = "img/typical.png";

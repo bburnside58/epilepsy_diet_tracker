@@ -7,7 +7,6 @@ import { HeaderComponent } from "./header.component"; // NEED
 // import { ZingCharts } from "./charts/zingcharts.component";
 import { Chart } from "./zing/chart.model";
 import { HomeComponent } from "./home/home.component";
-import { LoginPage } from "./zing/chartform.component";
 
 
 
@@ -18,7 +17,7 @@ import { LoginPage } from "./zing/chartform.component";
     selector: 'my-app',
     template: ` 
     	
-        <div class="container">
+        <div class="">
             <my-header></my-header>
             <router-outlet></router-outlet>
         </div>

@@ -3,7 +3,6 @@ import { FormBuilder, Validators } from '@angular/common';
 
 import { Chart } from "./chart.model";
 import { ZingCharts } from "./zingcharts.component";
-import { LoginPage } from "./chartform.component";
 
 @Component({
     selector: 'my-charts',
@@ -30,14 +29,13 @@ import { LoginPage } from "./chartform.component";
 
 <form>
     Carbs:
-<button type="button" class="btn btn-default" (click)="updateCarbs($event)">Add Meal</button>
-      <input class="macrosText" type="text" (keyup)="updateCarbs($event)">
+      <input class="macrosText" type="text" (keyup.enter)="updateCarbs($event)">
     Protein:
-      <input class="macrosText" type="text" (keyup)="updateProtein($event)">
+      <input class="macrosText" type="text" (keyup.enter)="updateProtein($event)">
     Fat:
-      <input class="macrosText" type="text" (keyup)="updateFat($event)">
+      <input class="macrosText" type="text" (keyup.enter)="updateFat($event)">
     MCT Oil:
-      <input class="macrosText" type="text" (keyup)="updateMCT($event)">
+      <input class="macrosText" type="text" (keyup.enter)="updateMCT($event)">
 
 </form>
 
@@ -47,7 +45,6 @@ import { LoginPage } from "./chartform.component";
 
 </div>
 
-<macrosForm></macrosForm>
 
 
         <div class="push"></div>
@@ -69,15 +66,29 @@ import { LoginPage } from "./chartform.component";
     `
 })
 export class ChartsComponent {
-    
+
+    //has a charts property that returns an array of chart that it acquires from a service 
     charts: Chart[];
 
-@ViewChild(ZingCharts)
-  chart: ZingCharts;
 
-
+    @ViewChild(ZingCharts)
+      chart: ZingCharts;
+//   something = {
+//     value: 0,
+//     add(grams) {
+//       this.value += grams;
+//     }
+// };
+// you can add methods into this constructor....might be helpful
+// call the method within the constructor
+// need to change the inputs from keyup
+ // carbohydrate = 5;
+ // this.charts[0].data.series[3].values = [carbohydrate];
+//carbNum = 5;
     constructor () {
       
+      //let carbNum = 5;
+        //let carbNum = this.charts[0].data.series[3].values;
         this.charts = [
             {
                 id: 'chart-1',
@@ -129,29 +140,28 @@ export class ChartsComponent {
                     }, // end of "plot"
                     "series":[
                       {
-                        "values":[0],
+                        "values":[null],
                         "background-color":"#488003", // green
                         "text":"Fat \n Goal: 10%"
                       },
                       {
-                        "values":[0],
+                        "values":[null],
                         "background-color":"#ecec13", // yellow
                         "text":"Protein Goal: 10%"
                       },
                       {
-                        "values":[0],
+                        "values":[null],
                         "background-color":"#a3001b", // red
                         "text":"MCT Oil Goal: 60%"
                       },
                       {
-                        "values":[0],
+                        "values":[null],
                         "background-color":"orange", // 
                         "text":"Carbs Goal: 20%"
                       }
-                    ]
+                    ]// end of series
                 } // end of data div
             }, // end of chart
-
         ] // end of charts array
     } // constructor
 
@@ -163,6 +173,7 @@ updateCarbs(event: any){
       
       if (event.target.value > 0) {
         //let dude = event.target.value;
+        // lets try +=
         let carbNum = Number(event.target.value);
         //let dude = 11;
         this.charts[0].data.series[3].values = [carbNum];
@@ -170,21 +181,23 @@ updateCarbs(event: any){
       } 
    }
 
-   updateProtein(event: any){
-      //event: any
-      
-      if (event.target.value > 0) {
-        //let dude = event.target.value;
-        let proNum = Number(event.target.value);
-        //let dude = 11;
-        this.charts[0].data.series[1].values = [proNum];
-        this.chart.update();
-      } else{ // let dude = event.target.value;
-    //   alert(yo);
-    let proNum = 0;
-    this.charts[0].data.series[1].values = [proNum];
-    this.chart.update();}
-   }
+  updateProtein(event: any){
+    //event: any
+    
+    if (event.target.value > 0) {
+      //let dude = event.target.value;
+      let proNum = Number(event.target.value);
+      //let dude = 11;
+      this.charts[0].data.series[1].values = [proNum];
+      this.chart.update();
+    } 
+    else { // let dude = event.target.value;
+      //   alert(yo);
+      let proNum = 0;
+      this.charts[0].data.series[1].values = [proNum];
+      this.chart.update();
+    }
+  }
 
    updateFat(event: any){
       //event: any
@@ -217,8 +230,5 @@ updateCarbs(event: any){
     this.charts[0].data.series[2].values = [mctNum];
     this.chart.update();}
    }
-    
-
-    
 
 }

@@ -1,20 +1,38 @@
 body {
   padding: 0px;
   font: 14px Georgia, serif;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('../img/blue-background-image-css.gif');
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/blue-background-image-css.gif');
   background-size: 100% 100%;
- 
+ }
+
+.foodImg {
+  display: table; 
+  margin-left: auto;
+  margin-right: auto;
+  
+  width: 100%;
+  height: 550px;
+  padding-left: 0px;
+  padding-right: 0px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/dietCropped.jpg');
+  background-size: cover;
+  border-bottom: 3px solid black;
+  border-top: 3px solid black;
+
 }
 
-.mainChart {
-	
+.foodImg > h1 { 
+  display: table-cell; 
+  height: 200px; 
+  vertical-align: middle;
+  text-align: center;
+  color: #d9d9d9;
+  font-size: 65px;
 }
 
-.chartHeight {
-	height: 300px;
-}
-small {
-	font: 15px "Lucida Grande", Helvetica, Arial, sans-serif;
+.subHeader {
+	color: #d9d9d9;
+  font-size: 35px;
 }
 p {
 	

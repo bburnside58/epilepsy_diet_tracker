@@ -14,7 +14,6 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms"; // NEED
 import { ChartsComponent } from "./zing/charts.component";// APP worked without this ?
 import { ZingCharts } from "./zing/zingcharts.component";
 import { HomeComponent } from "./home/home.component";
-import { LoginPage } from "./zing/chartform.component";
 // That thing with the empty service for AUTH....
 @NgModule({
     declarations: [
@@ -22,7 +21,6 @@ import { LoginPage } from "./zing/chartform.component";
         ChartsComponent, // app worked without this
         ZingCharts,
         HomeComponent,
-        LoginPage,
         // AuthenticationComponent,
         // LogoutComponent,
         // SignupComponent,
